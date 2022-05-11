@@ -26,4 +26,4 @@ It makes manually placing components a bit more efficient!
   That way you should have a directory like %USERPROFILE%\Documents\KiCad\6.0\scripting\plugins\JasSort
 2. If PCB Editor is running, go to Tools > External Plugins > Refresh Plugins.
 3. An annotator icon with a J is added to the main toolbar. Clicking it will immediately perform the annotation.'
-4. Go to Tools > Update Schematic From PCB. **Make sure `Re-link footprints to schematic symbols based on their reference designators` is UNCHECKED. Not doing so will break your schematic!**
+4. Go to Tools > Update Schematic From PCB. **Make sure `Re-link footprints to schematic symbols based on their reference designators` is UNCHECKED before accepting the change. Not doing so will break your schematic!**
