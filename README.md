@@ -16,3 +16,8 @@ This plugin adds an annotation button to the PCB Editor toolbar that re-annotate
 
 It makes manually placing components a bit more efficient!
 
+## Install
+Git clone or unzip into your KiCad 6 plugin directory, such as %USERPROFILE%\Documents\KiCad\6.0\scripting\plugins
+That way you should have a directory like %USERPROFILE%\Documents\KiCad\6.0\scripting\plugins\JasSort
+If PCB Editor is running, go to Tools > External Plugins > Refresh Plugins.
+An annotator icon with a J is added to the main toolbar. Clicking it will immediately perform the annotation.
