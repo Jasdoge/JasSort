@@ -25,9 +25,10 @@ class JasSort(pcbnew.ActionPlugin):
 
 	def add(self, footprint):
 		# Get ref like C or R with no number
-		ref = re.search("[^(-\?\n)]", footprint.GetReference())
-		if ref:
-			ref = ref.group(0)
+		start = re.search("[\?0-9]", footprint.GetReference())
+		ref = "UNKNOWN"
+		if start:
+			ref = footprint.GetReference()[0:start.start()]
 		else:
 			ref = "UNKNOWN"
 		# Get footprint name
@@ -111,6 +112,7 @@ class FpGroup:
 			)
 			if out == -1 or dist < out:
 				out = dist
+		#print(self.ref, self.value, round(out/10000))
 		return out
 
 
@@ -131,8 +133,6 @@ class FpGroup:
 sorter = ""
 # This is run directly, not through import
 if __name__ == "__main__":
-	#JasSort().Run()
-	sorter = JasSort()
-
+	JasSort().Run()
 
 
